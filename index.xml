@@ -7,5 +7,16 @@
     <language>de-ch</language>
     <atom:link href="http://www.joelbirrer.ch/" rel="self" type="application/rss+xml" />
     
+    <item>
+      <title>About</title>
+      <link>http://www.joelbirrer.ch/about/</link>
+      <pubDate>Fri, 02 Dec 2022 19:29:56 +0100</pubDate>
+      
+      <guid>http://www.joelbirrer.ch/about/</guid>
+      <description>&lt;h1 id=&#34;coming-soon-&#34;&gt;Coming soon ⏳&lt;/h1&gt;
+&lt;h3 id=&#34;in-the-meantime-enjoy-a-cup-of-coffee-or-tea&#34;&gt;In the meantime enjoy a cup of coffee or tea.&lt;/h3&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
