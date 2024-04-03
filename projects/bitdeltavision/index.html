@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>BitDeltaVision: A Real-Time Bitcoin Arbitrage Dashboard - Joël Birrer</title><meta name="Description" content="Personal website of Joël Birrer"><meta property="og:title" content="BitDeltaVision: A Real-Time Bitcoin Arbitrage Dashboard" />
+<meta property="og:description" content="Snapshot of BitDeltaVision with current Bitcoin prices and a multi-exchange trend chart tl;dr BitDeltaVision is a dashboard that provides real-time Bitcoin price comparisons in USD and EUR across major exchanges. It highlights arbitrage opportunities using Python, InfluxDB and Grafana, updating every five minutes. Explore potential arbitrage quickly and efficiently with BitDeltaVision.
+Overview BitDeltaVision gives traders the edge in the fast-paced world of cryptocurrency trading by offering a real-time view of Bitcoin prices across different exchanges." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.joelbirrer.ch/projects/bitdeltavision/" /><meta property="article:section" content="projects" />
+<meta property="article:published_time" content="2024-03-31T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-03-31T00:00:00+00:00" /><meta property="og:site_name" content="Personal website of Joël Birrer" />
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="BitDeltaVision: A Real-Time Bitcoin Arbitrage Dashboard"/>
+<meta name="twitter:description" content="Snapshot of BitDeltaVision with current Bitcoin prices and a multi-exchange trend chart tl;dr BitDeltaVision is a dashboard that provides real-time Bitcoin price comparisons in USD and EUR across major exchanges. It highlights arbitrage opportunities using Python, InfluxDB and Grafana, updating every five minutes. Explore potential arbitrage quickly and efficiently with BitDeltaVision.
+Overview BitDeltaVision gives traders the edge in the fast-paced world of cryptocurrency trading by offering a real-time view of Bitcoin prices across different exchanges."/>
+<meta name="application-name" content="Personal website of Joël Birrer">
+<meta name="apple-mobile-web-app-title" content="Personal website of Joël Birrer"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://www.joelbirrer.ch/projects/bitdeltavision/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "BitDeltaVision: A Real-Time Bitcoin Arbitrage Dashboard",
+        "inLanguage": "de-CH",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/www.joelbirrer.ch\/projects\/bitdeltavision\/"
+        },"genre": "projects","wordcount":  264 ,
+        "url": "http:\/\/www.joelbirrer.ch\/projects\/bitdeltavision\/","datePublished": "2024-03-31T00:00:00+00:00","dateModified": "2024-03-31T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Author"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="auto" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Joël Birrer">Joël Birrer</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/projects/"> Projects </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Joël Birrer">Joël Birrer</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/projects/" title="">Projects</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="page single special"><h1 class="single-title animate__animated animate__pulse animate__faster">BitDeltaVision: A Real-Time Bitcoin Arbitrage Dashboard</h1><div class="content" id="content"><figure><a class="lightgallery" href="/projects/bitdeltavision/grafana_dashboard_l.jpg" title="/projects/bitdeltavision/grafana_dashboard_s.jpg" data-thumbnail="/projects/bitdeltavision/grafana_dashboard_s.jpg" data-sub-html="<h2>Snapshot of BitDeltaVision with current Bitcoin prices and a multi-exchange trend chart</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/projects/bitdeltavision/grafana_dashboard_s.jpg"
+            data-srcset="/projects/bitdeltavision/grafana_dashboard_s.jpg, /projects/bitdeltavision/grafana_dashboard_s.jpg 1.5x, /projects/bitdeltavision/grafana_dashboard_l.jpg 2x"
+            data-sizes="auto"
+            alt="/projects/bitdeltavision/grafana_dashboard_s.jpg" width="1274" height="444" />
+    </a><figcaption class="image-caption">Snapshot of BitDeltaVision with current Bitcoin prices and a multi-exchange trend chart</figcaption>
+    </figure>
+<blockquote>
+<p><strong>tl;dr</strong> <em>BitDeltaVision</em> is a dashboard that provides real-time Bitcoin price comparisons in USD and EUR across major exchanges. It highlights arbitrage opportunities using Python, InfluxDB and Grafana, updating every five minutes. Explore potential arbitrage quickly and efficiently with BitDeltaVision.</p>
+</blockquote>
+<h3 id="overview">Overview</h3>
+<p>BitDeltaVision gives traders the edge in the fast-paced world of cryptocurrency trading by offering a real-time view of Bitcoin prices across different exchanges. It&rsquo;s the perfect tool for spotting <a href="https://www.forbes.com/advisor/investing/what-is-arbitrage/" target="_blank" rel="noopener noreffer">arbitrage</a>
+ opportunities at a glance.</p>
+<h3 id="key-features">Key Features</h3>
+<ul>
+<li><strong>Real-Time Data:</strong> Prices are refreshed every five minutes to reflect the latest market movements.</li>
+<li><strong>Multi-Currency Comparison:</strong> Monitor Bitcoin prices in USD and EUR across leading exchanges like <a href="https://www.bitfinex.com/" target="_blank" rel="noopener noreffer">Bitfinex</a>
+, <a href="https://pro.coinbase.com/" target="_blank" rel="noopener noreffer">Coinbase Pro</a>
+ and <a href="https://www.kraken.com/" target="_blank" rel="noopener noreffer">Kraken</a>
+.</li>
+<li><strong>24-Hour History:</strong> Access a comprehensive 24-hour price history, maintained for 7 days, for trend analysis and informed decision-making.</li>
+</ul>
+<h3 id="technologies-employed">Technologies Employed</h3>
+<p>BitDeltaVision incorporates several state-of-the-art technologies:</p>
+<ul>
+<li><strong>Python:</strong> Utilizes asynchronous <a href="https://docs.python.org/3/library/asyncio.html" target="_blank" rel="noopener noreffer">libraries</a>
+ for efficient data fetching from <a href="https://www.coinapi.io/" target="_blank" rel="noopener noreffer">CoinAPI</a>
+.</li>
+<li><strong>InfluxDB:</strong> An optimized time-series database for storing and querying substantial volumes of timestamped data. <a href="https://www.influxdata.com/time-series-database/" target="_blank" rel="noopener noreffer">Learn more about InfluxDB</a>
+.</li>
+<li><strong>Grafana:</strong> Powers the creation of dynamic and interactive dashboards. <a href="https://grafana.com/" target="_blank" rel="noopener noreffer">Explore Grafana</a>
+.</li>
+</ul>
+<h3 id="challenges-and-improvements">Challenges and Improvements</h3>
+<p>The development posed notable challenges, especially in data retrieval and storage. By leveraging Python&rsquo;s asynchronous features, we achieved fast and concurrent data fetching. InfluxDB was selected for its exceptional handling of time-series data, enabling swift and effective database queries.</p>
+<h3 id="final-thoughts">Final Thoughts</h3>
+<p>BitDeltaVision is fully operational. It&rsquo;s ready to include more assets, offering customization through advanced visualizations. Looking ahead, integrating automated trading could further refine its utility.</p>
+<ul>
+<li><strong>Live Dashboard:</strong> <a href="https://grafana.joelbirrer.dev/public-dashboards/ccd4627431e94899853f2f4c081f45ed" target="_blank" rel="noopener noreffer">BitDeltaVision</a>
+</li>
+<li><strong>GitHub:</strong> <a href="https://github.com/joelbirrer/BitDeltaVision" target="_blank" rel="noopener noreffer">Source Code</a>
+</li>
+</ul>
+</div></div></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.124.1">Hugo</a> | Theme - <a href="https://github.com/Fastbyte01/KeepIt" target="_blank" rel="noopener noreffer" title="KeepIt 0.2.10"><i aria-hidden="true"></i> KeepIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"lightgallery":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

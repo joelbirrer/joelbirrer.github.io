@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Joël Birrer</title>
+    <link>http://www.joelbirrer.ch/projects/</link>
+    <description>Recent content in Projects on Joël Birrer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-CH</language>
+    <lastBuildDate>Sun, 31 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://www.joelbirrer.ch/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BitDeltaVision: A Real-Time Bitcoin Arbitrage Dashboard</title>
+      <link>http://www.joelbirrer.ch/projects/bitdeltavision/</link>
+      <pubDate>Sun, 31 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://www.joelbirrer.ch/projects/bitdeltavision/</guid>
+      <description>Snapshot of BitDeltaVision with current Bitcoin prices and a multi-exchange trend chart tl;dr BitDeltaVision is a dashboard that provides real-time Bitcoin price comparisons in USD and EUR across major exchanges. It highlights arbitrage opportunities using Python, InfluxDB and Grafana, updating every five minutes. Explore potential arbitrage quickly and efficiently with BitDeltaVision.&#xA;Overview BitDeltaVision gives traders the edge in the fast-paced world of cryptocurrency trading by offering a real-time view of Bitcoin prices across different exchanges.</description>
+    </item>
+  </channel>
+</rss>
